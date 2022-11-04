@@ -1,0 +1,56 @@
+@import "../../utils/colors.css";
+
+.page-numbers {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+    text-align: center;
+}
+
+.page-numbers li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.page-numbers li.active {
+    background-color: var(--primary);
+    border-radius: 8px;
+    color: var(--white);
+    width: 30px;
+}
+
+.page-numbers li button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.page-numbers li button:hover {
+    background-color: var(--primary);
+    border-radius: 8px;
+    color: var(--white);
+}
+
+.page-numbers li button:active {
+    transform: scale(0.9);
+}
+
+.page-numbers li button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.page-numbers li button:disabled:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.page-numbers li button:disabled:active {
+    transform: scale(1);
+}

@@ -1,0 +1,65 @@
+@import "../../utils/colors.css";
+
+.itauros-ui-file-uploader-drop-zone-wrapper,
+.itauros-ui-file-uploader-drop-zone-wrapper > div {
+    justify-content: center;
+    align-items: center;
+    width: "100%";
+    border-radius: 8px;
+    user-select: none;
+    padding: 5px;
+}
+
+.itauros-ui-file-uploader-drop-zone-disabled {
+    background-color: var(--grey-transparent);
+}
+
+.itauros-ui-file-uploader-drop-zone-wrapper {
+    border: 1px dashed var(--primary);
+    cursor: pointer;
+}
+
+.itauros-ui-file-uploader-drop-zone-wrapper div {
+    flex-direction: column;
+    text-align: center;
+}
+
+.itauros-ui-file-uploader-drop-zone-active {
+    background: var(--primary-transparent);
+    border-color: var(--primary);
+}
+
+.itauros-ui-file-uploader-list-files li {
+    list-style-type: none;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itauros-ui-file-uploader-list-files {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.itauros-ui-file-uploader-upload-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.itauros-ui-file-uploader-text {
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+.itauros-ui-file-uploader-text-file-span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+}
+
+.itauros-ui-file-uploader-text-disabled {
+    color: var(--grey2);
+}

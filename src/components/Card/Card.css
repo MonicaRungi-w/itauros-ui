@@ -1,0 +1,26 @@
+@import "../../utils/colors.css";
+
+.itauros-ui-card-box {
+    width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px -15px var(--grey1);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.itauros-ui-card-primary {
+    border-top: 3px solid var(--primary);
+    background-color: var(--white);
+}
+
+.itauros-ui-card-header {
+    color: var(--grey4);
+    font-weight: "500";
+}
+
+.itauros-ui-card-box p {
+    margin: 0 auto;
+    line-height: 2;
+    text-align: justify;
+    color: var(--grey3);
+}

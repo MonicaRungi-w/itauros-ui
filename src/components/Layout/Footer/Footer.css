@@ -1,0 +1,11 @@
+@import "../../../utils/colors.css";
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+.footer-container {
+    width: inherit;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}

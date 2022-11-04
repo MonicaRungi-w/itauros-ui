@@ -1,0 +1,59 @@
+@import "../../../utils/colors.css";
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+#header-custom {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    background-color: var(--primary);
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header .logo-title-container div {
+    margin-left: 20px;
+    color: var(--white);
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.header .logo-title-container img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-alignment {
+    justify-content: end;
+}
+
+.navbar-toggler:focus {
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler {
+    display: flex;
+    justify-content: right;
+    border: 0 !important;
+}
+
+.li-item {
+    display: flex;
+    align-items: center;
+}

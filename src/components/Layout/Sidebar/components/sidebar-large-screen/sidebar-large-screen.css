@@ -1,0 +1,134 @@
+@import "../../../../../utils/colors.css";
+/* @import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+#sidebar-container {
+    height: 100vh;
+    background-color: #333;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-expanded {
+    width: 230px;
+    transition: all 800ms;
+}
+.sidebar-collapsed {
+    width: 80px;
+    transition: all 800ms;
+}
+
+@media (max-width: 768px) {
+    .sidebar-expanded {
+        width: 80px;
+    }
+}
+
+#sidebar-container .list-group a {
+    height: 50px;
+    color: white;
+}
+
+#sidebar-container .list-group .sidebar-submenu a {
+    height: 45px;
+    padding-left: 30px;
+}
+.sidebar-submenu {
+    font-size: 0.9rem;
+}
+
+.sidebar-separator-title {
+    background-color: #333;
+}
+.sidebar-separator {
+    background-color: #333;
+    height: 25px;
+}
+.logo-separator {
+    background-color: #333;
+    height: 60px;
+}
+
+.title-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.separator {
+    margin-right: 15px;
+    transition: all 700ms;
+}
+
+.no-separator {
+    margin-right: 0px;
+    transition: all 700ms;
+}
+
+#back-btn {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+
+.back-open {
+    transform: rotate(-90deg);
+    transition: all 500ms linear;
+}
+
+.back {
+    transform: rotate(-90deg);
+    width: 20px;
+    height: 20px;
+}
+
+.back-close {
+    transform: rotate(90deg);
+    transition: all 500ms linear;
+}
+
+.item {
+    cursor: pointer;
+}
+
+#on-hover-transition {
+    background-color: var(--white);
+    opacity: 0.2;
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+    border-right-width: 4px;
+    border-right-style: solid;
+    border-right-color: var(--primary);
+    transition: left 500ms ease-in-out;
+}
+
+#item-container:hover > #on-hover-transition {
+    left: 0;
+    transition: left 500ms ease-in-out;
+}
+
+.on-hover-transition-selected {
+    left: 0 !important;
+}
+
+.title-fade-out {
+    display: none !important;
+    margin-left: 0;
+    transition: all 700ms;
+}
+
+.title-fade-in {
+    display: flex;
+    margin-left: 10px;
+    transition: all 700ms;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}

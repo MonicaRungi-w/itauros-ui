@@ -1,0 +1,75 @@
+@import "../../utils/colors.css";
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--black-transparent);
+}
+
+.modal-content {
+    width: 300px;
+    height: 350px;
+    padding-top: 10px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--primary);
+}
+
+.modal-content .header {
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid var(--grey1);
+}
+
+.modal-content .header .title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.modal-content .close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.modal-content .close-icon:hover {
+    opacity: 0.8;
+}
+
+.modal-content .close-icon:active {
+    transform: scale(0.8);
+}
+
+.wrapper-content {
+    position: relative;
+    margin-top: 20px;
+    font-size: 14px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+    height: 100%;
+}
+
+.button-container {
+    margin-bottom: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: -webkit-fill-available;
+    background-color: var(--white);
+    padding: 5px;
+    overflow: hidden;
+}
