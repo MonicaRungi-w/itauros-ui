@@ -50,7 +50,7 @@ const Table = ({
             type={"number"}
             placeholder="Page limit"
             value={limitPerPage.toString()}
-            onChange={(e: string) => setLimitPerPage(Number(e))}
+            setValue={(e: string) => setLimitPerPage(Number(e))}
           />
         </div>
         <div>Columns:</div>

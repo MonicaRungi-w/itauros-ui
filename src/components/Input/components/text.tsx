@@ -1,21 +1,19 @@
 import React, { ChangeEvent, ReactNode } from "react";
 import Check from "../../../assets/svg-components/check";
 
-export interface TextProps {
+type TextProps = JSX.IntrinsicElements["input"] & {
   placeholder: string;
   value: string;
-  onChange: (e: string) => void;
   fullWidth?: boolean;
   prefix?: ReactNode;
   suffix?: ReactNode;
   disabled?: boolean;
   isValid?: boolean;
-}
+};
 
 const Text = ({
   placeholder,
   value,
-  onChange,
   fullWidth = false,
   prefix,
   suffix,
@@ -30,14 +28,13 @@ const Text = ({
         fullWidth ? "fullWidth" : "",
         disabled ? "disabled" : "",
       ].join(" ")}
-      {...props}
     >
       <input
         type={"text"}
         className="text-field"
         placeholder={placeholder}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        {...props}
         disabled={disabled}
       />
       <div className="valid-image-container">

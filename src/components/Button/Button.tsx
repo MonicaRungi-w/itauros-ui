@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 
 import "./Button.css";
 import "../common.css";
@@ -9,7 +9,7 @@ type ButtonProps = JSX.IntrinsicElements["button"] & {
   underlined?: boolean;
   disable?: boolean;
   size?: "small" | "large";
-  onClick: () => void;
+  onClick: (e?: MouseEvent) => void;
 };
 
 const Button = (props: ButtonProps) => {

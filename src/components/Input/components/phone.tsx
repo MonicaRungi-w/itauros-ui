@@ -4,7 +4,7 @@ import Check from "../../../assets/svg-components/check";
 export interface PhoneProps {
   placeholder: string;
   value: string;
-  onChange: (t: string) => void;
+  setValue: (t: string) => void;
   fullWidth?: boolean;
   icon?: string;
   disabled?: boolean;
@@ -13,7 +13,7 @@ export interface PhoneProps {
 const Phone = ({
   placeholder,
   value,
-  onChange,
+  setValue,
   fullWidth = false,
   icon,
   disabled = false,
@@ -25,7 +25,7 @@ const Phone = ({
   useEffect(() => {
     if (prefix && number) {
       const newValue = `${prefix} ${number}`;
-      onChange(newValue);
+      setValue(newValue);
     }
   }, [prefix, number]);
 

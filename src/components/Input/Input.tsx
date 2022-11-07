@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ChangeEvent, ReactNode } from "react";
 
 import Text from "./components/text";
 import NumberInput from "./components/number";
@@ -9,10 +9,10 @@ import Phone from "./components/phone";
 import "./Input.css";
 import "../common.css";
 
-type InputProps = {
+type InputProps = JSX.IntrinsicElements["input"] & {
   placeholder: string;
   value: string;
-  onChange: (e: string) => void;
+  setValue?: (t: string) => void;
   type?: "text" | "number" | "password" | "search" | "email" | "phone";
   fullWidth?: boolean;
   icon?: string;
@@ -27,7 +27,7 @@ type InputProps = {
 const Input = ({
   placeholder,
   value,
-  onChange,
+  setValue,
   type = "text",
   fullWidth = false,
   icon = "",
@@ -48,7 +48,6 @@ const Input = ({
             fullWidth={fullWidth}
             {...props}
             value={value}
-            onChange={onChange}
             disabled={disabled}
             isValid={isValid}
             prefix={prefix}
@@ -62,9 +61,9 @@ const Input = ({
             fullWidth={fullWidth}
             {...props}
             value={value}
-            onChange={onChange}
             disabled={disabled}
             step={step}
+            onChange={setValue ? setValue : () => {}}
           />
         );
       case "password":
@@ -75,7 +74,6 @@ const Input = ({
             icon={icon}
             {...props}
             value={value}
-            onChange={onChange}
             disabled={disabled}
           />
         );
@@ -89,7 +87,7 @@ const Input = ({
               searchValues={searchValues}
               {...props}
               value={value}
-              onChange={onChange}
+              onChange={setValue ? setValue : () => {}}
             />
           )
         );
@@ -100,8 +98,8 @@ const Input = ({
             fullWidth={fullWidth}
             {...props}
             value={value}
-            onChange={onChange}
             disabled={disabled}
+            setValue={setValue ? setValue : () => {}}
           />
         );
       default:

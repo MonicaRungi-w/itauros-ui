@@ -83,7 +83,11 @@ const Search = ({
           className="text-field"
           placeholder={placeholder}
           {...props}
-          value={value}
+          value={
+            searchValuesArray
+              ? searchValuesArray.filter((v) => v.id === value)[0]?.label
+              : value
+          }
           onChange={(e) => toggleSearch(e.target.value)}
         />
         <div className="">
@@ -102,7 +106,11 @@ const Search = ({
           ].join(" ")}
         >
           {searchValuesArray.map((value, idx) => (
-            <div key={idx} className="search-list-item">
+            <div
+              key={idx}
+              className="search-list-item"
+              onClick={() => onChange(value.id)}
+            >
               {value.label}
             </div>
           ))}

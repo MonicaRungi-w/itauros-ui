@@ -2,10 +2,12 @@ import React, { ReactNode, useState } from "react";
 import EyeHide from "../../../assets/svg-components/eye-hide";
 import EyeShow from "../../../assets/svg-components/eye-show";
 
+require("react-dom");
+
 export interface PasswordProps {
   placeholder: string;
   value: string;
-  onChange: (t: string) => void;
+  // onChange: (t: string) => void;
   fullWidth?: boolean;
   icon: string;
   prefix?: ReactNode;
@@ -16,7 +18,7 @@ export interface PasswordProps {
 const Password = ({
   placeholder,
   value,
-  onChange,
+  // onChange,
   fullWidth = false,
   icon,
   prefix,
@@ -40,7 +42,7 @@ const Password = ({
         placeholder={placeholder}
         {...props}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        // onChange={(e) => onChange(e.target.value)}
         disabled={disabled}
       />
       <div className="password-image-container" onClick={() => setShow(!show)}>

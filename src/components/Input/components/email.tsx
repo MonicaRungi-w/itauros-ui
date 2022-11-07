@@ -4,7 +4,6 @@ import Check from "../../../assets/svg-components/check";
 export interface EmailProps {
   placeholder: string;
   value: string;
-  onChange: (t: string) => void;
   fullWidth?: boolean;
   icon?: string;
   disabled?: boolean;
@@ -13,7 +12,6 @@ export interface EmailProps {
 const Email = ({
   placeholder,
   value,
-  onChange,
   fullWidth = false,
   icon,
   disabled = false,
@@ -26,7 +24,7 @@ const Email = ({
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValid = regexMail.test(value);
     setIsValid(isValid);
-    onChange(value);
+    // onChange(value);
   };
 
   return (

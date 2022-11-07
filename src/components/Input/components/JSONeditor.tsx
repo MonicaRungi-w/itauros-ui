@@ -3,7 +3,7 @@ import Editor, { EditorProps } from "@monaco-editor/react";
 
 export interface JSONEditorProps {
   value: any;
-  onChange: (data: any) => void;
+  setValue: (data: any) => void;
   theme?: "vs-dark" | "light";
   language: string;
 }
@@ -12,7 +12,7 @@ const JSONEditor = ({
   theme = "light",
   language,
   value,
-  onChange,
+  setValue,
   ...props
 }: JSONEditorProps) => {
   return (
@@ -26,7 +26,7 @@ const JSONEditor = ({
           defaultValue={
             value ? JSON.stringify(value, null, 2) : "//insert code here"
           }
-          onChange={(value) => onChange(value)}
+          onChange={(value) => setValue(value)}
         />
       </div>
     </>
