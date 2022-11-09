@@ -77,13 +77,11 @@
 }
 
 .notification-message {
-    margin: 0;
+    margin: 0 auto;
     text-align: left;
-    height: 18px;
-    margin-left: -1px;
+    line-height: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 .notification-image {
@@ -102,7 +100,6 @@
 }
 
 .white-bg {
-    
 }
 
 .toast-item {

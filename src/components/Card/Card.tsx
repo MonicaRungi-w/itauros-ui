@@ -27,12 +27,18 @@ const Card = (props: CardProps) => {
       {...props}
     >
       {title && (
-        <h2 className={["itauros-ui-card-header"].join(" ")} style={props.titleStyle}>
+        <h2
+          className={["itauros-ui-card-header"].join(" ")}
+          style={props.titleStyle}
+        >
           {title}
         </h2>
       )}
       {caption && (
-        <p className={["itauros-ui-card-description"].join(" ")} style={props.captionStyle}>
+        <p
+          className={["paragraph itauros-ui-card-description"].join(" ")}
+          style={props.captionStyle}
+        >
           {caption}
         </p>
       )}

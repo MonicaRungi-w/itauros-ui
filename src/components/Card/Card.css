@@ -18,7 +18,7 @@
     font-weight: "500";
 }
 
-.itauros-ui-card-box p {
+.itauros-ui-card-box .paragraph {
     margin: 0 auto;
     line-height: 2;
     text-align: justify;
